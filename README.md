@@ -12,20 +12,20 @@ Demo video: https://youtu.be/yMdjBaz2Wa4
 
 I would like to create conditional form surveys.
 
-This is journey:
+This is my journey:
 
 - attempt 1: with [Google Forms](https://en.wikipedia.org/wiki/Google_Forms) ⇢ it failed, Google Forms is too limited about conditional feature
-- attempt 2: with free [TypeForm](https://en.wikipedia.org/wiki/Typeform_(service)) plan ⇢ it failed, too limited about conditionnal (« Logic jumps »)
+- attempt 2: with free [TypeForm](https://en.wikipedia.org/wiki/Typeform_(service)) plan ⇢ it failed, too limited about conditional (« Logic jumps »)
 - attempt 3: with professional [TypeForm](https://en.wikipedia.org/wiki/Typeform_(service)) plan ⇢ it failed, really tough and tedious to configure and some limitations
-- attempt 4: with OpenSource [LimeSurvey](https://en.wikipedia.org/wiki/LimeSurvey) ⇢ less limitation that Google Forms and TypeForm but really tough and tedious to configure
+- attempt 4: with OpenSource [LimeSurvey](https://en.wikipedia.org/wiki/LimeSurvey) ⇢ fewer limitations that Google Forms and TypeForm but really tough and tedious to configure
 
 Finally, after some search on GitHub, I found [SurveyJS Library](https://github.com/surveyjs/survey-library) and I wrote this POC to test it.
 
 It is a success, now I can write and configure my survey with code: [`src/datas/surveys.json`](src/datas/surveys.json).
 
-SurveyJS have many buildin [Question Types](https://surveyjs.io/Examples/Library?id=questiontype-text&platform=jQuery&theme=modern) and I can customize or create new Question Types.
+SurveyJS have many build in [Question Types](https://surveyjs.io/Examples/Library?id=questiontype-text&platform=jQuery&theme=modern) and I can customize or create new Question Types.
 
-Yes, I know, this solution isn't accessible to non-programmers people, but I'm programmer, and with this stack, I have no limitation and I can write survey quickly, without painfull UI.
+Yes, I know, this solution isn't accessible to non-programmer people, but I'm programmer, and with this stack, I have no limitation and I can write survey quickly, without painful UI.
 
 ## Prerequisites
 
