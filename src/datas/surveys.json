@@ -1,0 +1,87 @@
+{
+	"fullstack": {
+		"title": "Questionnaire avant entretien Développeur FullStack",
+		"showQuestionNumbers": "off",
+		"pages": [
+			{
+				"title": "Questions à propos de [ReactJS](https://fr.wikipedia.org/wiki/React_(JavaScript))",
+				"questions": [
+					{
+						"type": "radiogroup",
+						"name": "reactjs_experience",
+						"title": "Quelle est ton expérience en ReactJS ?",
+						"isRequired": true,
+						"choices": [
+							{
+								"value": "reactjs_0",
+								"text": "Je ne connais pas du tout ReactJS"
+							},
+							{
+								"value": "reactjs_1",
+								"text": "Je connais ReactJS mais je n'ai jamais vraiment pratiqué"
+							},
+							{
+								"value": "reactjs_2",
+								"text": "J'ai déjà fait un petit [POC](https://google.com) perso en ReactJS"
+							},
+							{
+								"value": "reactjs_3",
+								"text": "J'ai déjà contribué à un projet ReactJS professionnellement"
+							}
+						]
+					}
+				]
+			},
+			{
+				"title": "SQL",
+				"questions": [
+					{
+						"type": "radiogroup",
+						"name": "sql_experience",
+						"title": "Quelle est ton expérience [SQL](https://fr.wikipedia.org/wiki/Structured_Query_Language) ?",
+						"isRequired": true,
+						"choices": [
+							{
+								"value": "sql_0",
+								"text": "Je ne connais pas du tout le langage SQL"
+							},
+							{
+								"value": "sql_1",
+								"text": "J'ai une connaissance théorique du langage SQL mais je n'ai jmais vraiment pratiqué"
+							},
+							{
+								"value": "sql_2",
+								"text": "J'ai déjà fait un petit [POC](https://google.com) perso en SQL"
+							},
+							{
+								"value": "sql_3",
+								"text": "J'ai déjà mis en pratique le langage SQL professionnelement"
+							}
+						]
+					},
+					{
+						"type": "checkbox",
+						"name": "sql_skills",
+						"title": "Tes compétences SQL",
+						"isRequired": true,
+						"visibleIf": "{sql_experience}='sql_2' or {sql_experience}='sql_3'",
+						"choices": [
+							{
+								"value": "sql_data_modeling",
+								"text": "J'ai déjà modélisé un modèle de données"
+							},
+							{
+								"value": "sql_advanced_query",
+								"text": "Je n'ai pas de difficulté pour écrire des requêtes SQL avancées (jointures, group by…)"
+							},
+							{
+								"value": "sql_index",
+								"text": "Je comprends comment optimiser un modèle de données (définir des index pertinents)"
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

@@ -1,0 +1,30 @@
+version: '3.7'
+services:
+    postgres:
+        image: postgres:12.3-alpine
+        environment:
+            POSTGRES_USER: spacefill
+            POSTGRES_DB: spacefill
+            POSTGRES_PASSWORD: password
+        ports:
+        - "5432:5432"
+        volumes:
+        - ./volumes/postgres/:/var/lib/postgresql/data/
+    
+    postgraphile:
+        image: graphile/postgraphile:v4.6.0
+        ports:
+          - 5000:5000
+        command: >
+            --cors
+            --schema public
+            --enhance-graphiql
+            --retry-on-init-fail
+            --watch
+            --enhance-graphiql
+            --default-role anonymous
+            --extended-errors severity,code,detail,hint,position,internalPosition,internalQuery,where,schema,table,column,dataType,constraint,file,line,routine
+        environment:
+          DATABASE_URL: postgres://spacefill:password@postgres:5432/spacefill
+          DEBUG: postgraphile:graphql,postgraphile:request,postgraphile:postgres*
+    
